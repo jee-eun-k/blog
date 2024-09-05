@@ -30,22 +30,22 @@ export default function MusicPage() {
         <div className='border-t'>
           <div className='bg-background'>
             <div className='grid lg:grid-cols-5'>
-              <Sidebar playlists={playlists} className='hidden lg:block' />
               <div className='col-span-3 lg:col-span-4 lg:border-l'>
                 <div className='h-full px-4 py-6 lg:px-8'>
-                  <Tabs defaultValue='music' className='h-full space-y-6'>
+                  <Tabs defaultValue='reactjs' className='h-full space-y-6'>
                     <div className='space-between flex items-center'>
                       <TabsList>
-                        <TabsTrigger value='music' className='relative'>
-                          Front-end
+                        <TabsTrigger value='reactjs'>React.js</TabsTrigger>
+                        <TabsTrigger value='nextjs' className='relative'>
+                          Next.js
                         </TabsTrigger>
-                        <TabsTrigger value='live' disabled>
-                          Back-end
+                        <TabsTrigger value='vuejs' disabled>
+                          Vue.js
                         </TabsTrigger>
                       </TabsList>
                     </div>
                     <TabsContent
-                      value='music'
+                      value='reactjs'
                       className='border-none p-0 outline-none'
                     >
                       <div className='flex items-center justify-between'>

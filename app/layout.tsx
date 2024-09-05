@@ -1,13 +1,12 @@
-import './globals.css';
 import { Metadata, Viewport } from 'next';
+import './globals.css';
 
-import { siteConfig } from '@/config/site';
-import { fontSans } from '@/lib/fonts';
-import { cn } from '@/lib/utils';
-import { Analytics } from '@/components/analytics';
 import { ThemeProvider } from '@/components/providers';
 import { TailwindIndicator } from '@/components/tailwind-indicator';
 import { ThemeSwitcher } from '@/components/theme-switcher';
+import { siteConfig } from '@/config/site';
+import { fontSans } from '@/lib/fonts';
+import { cn } from '@/lib/utils';
 import { Toaster as DefaultToaster } from '@/registry/default/ui/toaster';
 import { Toaster as NewYorkSonner } from '@/registry/new-york/ui/sonner';
 import { Toaster as NewYorkToaster } from '@/registry/new-york/ui/toaster';
@@ -88,14 +87,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
             enableSystem
             disableTransitionOnChange
           >
-            <div vaul-drawer-wrapper=''>
-              <div className='relative flex min-h-screen flex-col bg-background'>
-                {children}
-              </div>
-            </div>
+            <div>{children}</div>
             <TailwindIndicator />
             <ThemeSwitcher />
-            <Analytics />
             <NewYorkToaster />
             <DefaultToaster />
             <NewYorkSonner />
